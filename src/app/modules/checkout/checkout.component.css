@@ -1,0 +1,33 @@
+.checkout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 25px;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 25px;
+}
+
+.checkout-header {
+    width: 100%;
+    text-align: center;
+}
+
+.checkout-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.checkout-form {
+    width: 100%;
+}

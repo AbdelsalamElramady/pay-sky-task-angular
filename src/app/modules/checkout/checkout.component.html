@@ -1,0 +1,10 @@
+<div class="checkout page-wrapper">
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1 class="checkout-title">Checkout</h1>
+        </div>
+        <div class="checkout-form">
+            <app-checkout-form (onSubmit)="onCheckoutSubmit($event)" [loading]="loading"></app-checkout-form>
+        </div>
+    </div>
+</div>

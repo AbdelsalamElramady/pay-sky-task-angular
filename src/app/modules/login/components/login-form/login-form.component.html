@@ -1,0 +1,27 @@
+<div class="login-form">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form-group">
+        <div class="login-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Email" formControlName="email">
+                <mat-hint>Hint: test@account.com</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="login-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-hint>Hint: Password123</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="login-form-control">
+            <mat-checkbox class="login-form-remember-input" formControlName="remember">Remember me</mat-checkbox>
+        </div>
+        <div class="login-form-submit">
+            <button [disabled]="loginForm.invalid || loading" mat-raised-button type="submit" color="primary" class="login-form-submit-button">Login</button>
+        </div>
+    </form>
+</div>

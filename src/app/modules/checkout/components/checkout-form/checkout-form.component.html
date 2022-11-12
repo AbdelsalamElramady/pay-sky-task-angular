@@ -1,0 +1,56 @@
+<div class="checkout-form">
+    <form class="checkout-form-group" [formGroup]="checkoutForm" (ngSubmit)="onCheckout()">
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Processing Code</mat-label>
+                <input matInput type="number" placeholder="Processing Code" formControlName="processingCode">
+                <mat-hint>Hint: 999000</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>System Trace Nr</mat-label>
+                <input matInput type="number" placeholder="System Trace Nr" formControlName="systemTraceNr">
+                <mat-hint>Hint: 36</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Function Code</mat-label>
+                <input matInput type="number" placeholder="Function Code" formControlName="functionCode">
+                <mat-hint>Hint: 1324</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Card No</mat-label>
+                <input matInput type="number" placeholder="Card No" formControlName="cardNo">
+                <mat-hint>Hint: 4712345601012222</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Card Holder</mat-label>
+                <input matInput type="text" placeholder="Card Holder" formControlName="cardHolder">
+                <mat-hint>Hint: Ahmed Mohamed</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Amount Trxn</mat-label>
+                <input matInput type="number" placeholder="Amount Trxn" formControlName="amountTrxn">
+                <mat-hint>Hint: 1000</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-control">
+            <mat-form-field appearance="outline">
+                <mat-label>Currency Code</mat-label>
+                <input matInput type="number" placeholder="Currency Code" formControlName="currencyCode">
+                <mat-hint>Hint: 840</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="checkout-form-submit">
+            <button [disabled]="checkoutForm.invalid || loading" mat-raised-button type="submit" color="primary" class="checkout-form-submit-button">Submit</button>
+        </div>
+    </form>
+</div>
